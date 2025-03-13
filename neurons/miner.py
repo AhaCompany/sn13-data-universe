@@ -48,7 +48,7 @@ from common.data import DataLabel, DataSource
 from common.protocol import OnDemandRequest
 from common.date_range import DateRange
 from scraping.scraper import ScrapeConfig, ScraperId
-
+import os
 
 # Enable logging to the miner TODO move it to some different location
 bt.logging.set_info(True)
@@ -79,7 +79,6 @@ class Miner:
 
             # The subtensor is our connection to the Bittensor blockchain.
             self.subtensor = bt.subtensor(config=self.config)
-            bt.logging.info(f"Subtensor: {self.subtensor}.")
 
             # The metagraph holds the state of the network, letting us know about other validators and miners.
             self.metagraph = self.subtensor.metagraph(self.config.netuid)

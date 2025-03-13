@@ -16,6 +16,11 @@
 </div>
 
 ---
+# install 
+## MACOS 
+- hạ torch xuống 2.2.2 
+- install như bình thường
+- chạy local: `export PYTHONPATH=. && python3 neurons/miner.py --wallet.name local.miner --wallet.hotkey default --subtensor.network "ws://103.14.27.117:9946" --subtensor.chain_endpoint "ws://103.14.27.117:9946" --netuid 3 --axon.port 8888`
 
 # Introduction
 
